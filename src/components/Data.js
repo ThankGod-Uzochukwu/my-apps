@@ -1,19 +1,13 @@
-import { 
-    useGetAllProductsQuery, 
-    useGetProductQuery, 
-    useAddTodoMutation, 
-    useUpdateTodoMutation, 
-    useDeleteTodoMutation 
-} from "../features/apiSlice"
+import { useGetAllProductsQuery, useGetProductQuery } from "../features/apiSlice"
 
 
 export const Data = ( ) => {
 
     const {data: allProductsData} = useGetAllProductsQuery();
-    // const {data: singleProductData} = useGetProductQuery("iphone");
+    const {data: singleProductData} = useGetProductQuery("iphone");
 
     console.log(allProductsData); 
-    // console.log(singleProductData); 
+    console.log(singleProductData); 
 
     return (
         <div>
